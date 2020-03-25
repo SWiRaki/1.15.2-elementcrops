@@ -1,0 +1,6 @@
+{
+	"parent": "block/crop",
+	"textures": {
+		"crop": "elementcrops:blocks/crop_diamondfruit_stage1"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"item.elementcrops.ironfruit_seeds": "Iron Fruit Seeds",
+	"item.elementcrops.ironfruit": "Iron Fruit",
+	"item.elementcrops.goldfruit_seeds": "Gold Fruit Seeds",
+	"item.elementcrops.goldfruit": "Gold Fruit",
+	"item.elementcrops.diamondfruit_seeds": "Diamond Fruit Seeds",
+	"item.elementcrops.diamondfruit": "Diamond Fruit",
+	"item.elementcrops.coalfruit_seeds": "Coal Fruit Seeds",
+	"item.elementcrops.coalfruit": "Coal Fruit",
+	"item.elementcrops.enderfruit_seeds": "Ender Fruit Seeds",
+	"item.elementcrops.enderfruit": "Ender Fruit",
+	"item.elementcrops.blazefruit_seeds": "Blaze Fruit Seeds",
+	"item.elementcrops.blazefruit": "Blaze Fruit",
+	
+	"block.elementcrops.dunginfuser": "Dung Infuser",
+	
+	"itemGroup.ElementCrops": "Element Crops"
+}

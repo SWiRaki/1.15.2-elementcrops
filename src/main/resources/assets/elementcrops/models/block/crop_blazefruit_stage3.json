@@ -1,0 +1,6 @@
+{
+	"parent": "block/crop",
+	"textures": {
+		"crop": "elementcrops:blocks/crop_blazefruit_stage3"
+	}
+}

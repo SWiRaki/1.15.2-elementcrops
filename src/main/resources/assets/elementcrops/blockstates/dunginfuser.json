@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "level=0": { "model": "elementcrops:block/dunginfuser" },
+        "level=1": { "model": "elementcrops:block/dunginfuser_level1" },
+        "level=2": { "model": "elementcrops:block/dunginfuser_level2" },
+        "level=3": { "model": "elementcrops:block/dunginfuser_level3" },
+        "level=4": { "model": "elementcrops:block/dunginfuser_level4" },
+        "level=5": { "model": "elementcrops:block/dunginfuser_level5" }
+    }
+}
