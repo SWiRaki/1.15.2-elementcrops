@@ -124,7 +124,7 @@ public class DungInfuserItemStackHandler implements IItemHandler, IItemHandlerMo
     @Nonnull
     public ItemStack extractItem(int pSlot, int pAmount, boolean pSimulate)
     {
-        if (pAmount == 0 || pSlot != 5)
+        if (pAmount == 0)
             return ItemStack.EMPTY;
 
         validateSlotIndex(pSlot);

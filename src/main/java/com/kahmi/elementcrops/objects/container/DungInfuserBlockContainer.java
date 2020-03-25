@@ -28,12 +28,12 @@ public class DungInfuserBlockContainer extends Container {
 		this.mPlayer = pPlayer;
 		this.mPlayerInventory = new InvWrapper(mPlayer.inventory);
 		this.mEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-			 addSlot(h, 0, 13, 34);
-			 addSlot(h, 1, 34, 34);
-			 addSlotRange(h, 2, 55, 34, 3, 18);
-			 addSlot(h, 5, 141, 34);
+			 addSlot(h, 0, 14, 35);
+			 addSlot(h, 1, 35, 35);
+			 addSlotRange(h, 2, 56, 35, 3, 18);
+			 addSlot(h, 5, 142, 35);
 		});
-		layoutPlayerInventorySlots(7, 83);
+		layoutPlayerInventorySlots(8, 84);
 	}
 	
 	@Override

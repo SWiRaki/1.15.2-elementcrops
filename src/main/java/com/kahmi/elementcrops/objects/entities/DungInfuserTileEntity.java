@@ -7,6 +7,7 @@ import com.kahmi.elementcrops.objects.container.DungInfuserBlockContainer;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.nbt.CompoundNBT;
@@ -21,7 +22,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 
 public class DungInfuserTileEntity extends TileEntity implements INamedContainerProvider {
-	//private DungInfuserItemStackHandler handler = new DungInfuserItemStackHandler();
+	private DungInfuserItemStackHandler handler = new DungInfuserItemStackHandler();
 	private LazyOptional<IItemHandler> mHandler = LazyOptional.of(this::createHandler);
 	
 	public DungInfuserTileEntity() {
@@ -34,16 +35,18 @@ public class DungInfuserTileEntity extends TileEntity implements INamedContainer
 	
 	@Override
 	public void read(CompoundNBT pCompound) {
-		CompoundNBT inventory = pCompound.getCompound("inv");
-		this.mHandler.ifPresent(h -> ((INBTSerializable<CompoundNBT>)h).deserializeNBT(inventory));
+		handler.deserializeNBT(pCompound);
+		this.mHandler.ifPresent(h -> {
+			ItemStackHelper.loadAllItems(pCompound, ((DungInfuserItemStackHandler)h).mItemStacks);
+		});
 		super.read(pCompound);
 	}
 
 	@Override
 	public CompoundNBT write(CompoundNBT pCompound) {
+		handler.deserializeNBT(pCompound);
 		this.mHandler.ifPresent(h -> {
-			CompoundNBT inventory = ((INBTSerializable<CompoundNBT>)h).serializeNBT();
-			pCompound.put("inv", inventory);
+			ItemStackHelper.saveAllItems(pCompound, ((DungInfuserItemStackHandler)h).mItemStacks);
 		});
 		return super.write(pCompound);
 	}
@@ -65,6 +68,6 @@ public class DungInfuserTileEntity extends TileEntity implements INamedContainer
 
 	@Override
 	public ITextComponent getDisplayName() {
-		return new StringTextComponent(getType().getRegistryName().getPath());
+		return new StringTextComponent("Dung Infuser");
 	}
 }

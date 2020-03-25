@@ -25,7 +25,6 @@ public class DungInfuserBlockScreen extends ContainerScreen<DungInfuserBlockCont
 		int x = (this.width - this.xSize) / 2;
 		int y = (this.height - this.ySize) / 2;
 		this.blit(x, y, 0, 0, this.xSize, this.ySize);
-		renderBackground();
 	}
 	
 	@Override
